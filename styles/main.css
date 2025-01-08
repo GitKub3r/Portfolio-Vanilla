@@ -17,10 +17,9 @@ body {
   background-color: var(--background);
   color: var(--text-color);
   font-size: 1rem;
-
   min-height: 100dvh;
-
   transition: all 0.3s ease;
+  display: flex;
 }
 
 ul {
@@ -51,17 +50,28 @@ ul {
   color: inherit;
   width: 100%;
   padding: 1rem;
+  text-transform: capitalize;
+  font-size: 1.25rem;
 }
 
 .main-navbar {
   display: flex;
   flex-direction: column;
   width: 200px;
-  height: 100vh;
+  height: 100dvh;
   background-color: var(--primary-color);
-  position: relative;
   border-right: 3px solid var(--secondary-color);
   box-shadow: 3px 0 2px var(--primary-color);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.content {
+  margin-left: 200px; /* Adjust this value to match the width of the navbar */
+  padding: 1rem;
+  flex-grow: 1;
 }
 
 .config-container {
@@ -69,14 +79,11 @@ ul {
   border: none;
   position: absolute;
   bottom: 25px;
-
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
+  justify-content: start;
 }
 
-#switch-button,
-#settings-button {
+#switch-button {
   background-color: transparent;
   padding: 0.25rem;
   border-radius: 100%;
@@ -85,8 +92,17 @@ ul {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-left: 2rem;
 }
 
-.dark {
+#switch-button .light {
+  display: none;
+}
+
+.lightmode #switch-button .light {
+  display: block;
+}
+
+.lightmode #switch-button .dark {
   display: none;
 }
