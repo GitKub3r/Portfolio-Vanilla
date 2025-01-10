@@ -1,0 +1,27 @@
+.title-group {
+  width: 100%;
+  text-align: center;
+}
+
+.title-group h1 {
+  font-size: 2.25rem;
+}
+
+.title-group p {
+  color: var(--placeholder-color);
+  font-size: 1.25rem;
+}
+
+#home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#home-content img {
+  width: 100%;
+  max-width: 300px;
+  margin: 2rem 0;
+}

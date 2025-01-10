@@ -1,0 +1,83 @@
+.navbar-item {
+  width: 100%;
+}
+
+.navbar-item:hover {
+  background-color: var(--background-hover);
+  cursor: pointer;
+}
+
+.current {
+  background-color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.current:hover {
+  background-color: var(--secondary-color);
+}
+
+.navbar-item a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  padding: 1rem;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+}
+
+.main-navbar {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100dvh;
+  background-color: var(--primary-color);
+  border-right: 3px solid var(--secondary-color);
+  box-shadow: 3px 0 2px var(--primary-color);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.content {
+  margin-left: 200px; /* Adjust this value to match the width of the navbar */
+  padding: 1rem;
+  flex-grow: 1;
+}
+
+.config-container {
+  width: 100%;
+  border: none;
+  position: absolute;
+  bottom: 25px;
+  display: flex;
+  justify-content: start;
+}
+
+#switch-button {
+  background-color: transparent;
+  padding: 0.25rem;
+  border-radius: 100%;
+  border-color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+#switch-button .light {
+  display: none;
+}
+
+.lightmode #switch-button .light {
+  display: block;
+}
+
+.lightmode #switch-button .dark {
+  display: none;
+}
