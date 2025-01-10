@@ -1,5 +1,14 @@
+.navbar-list {
+  height: 100%;
+  position: relative;
+}
+
 .navbar-item {
   width: 100%;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar-item:hover {
@@ -35,27 +44,14 @@
   width: 200px;
   height: 100dvh;
   background-color: var(--primary-color);
-  border-right: 3px solid var(--secondary-color);
   box-shadow: 3px 0 2px var(--primary-color);
   position: fixed;
   left: 0;
-  top: 0;
-  bottom: 0;
 }
 
 .content {
-  margin-left: 200px; /* Adjust this value to match the width of the navbar */
-  padding: 1rem;
+  margin-left: 200px;
   flex-grow: 1;
-}
-
-.config-container {
-  width: 100%;
-  border: none;
-  position: absolute;
-  bottom: 25px;
-  display: flex;
-  justify-content: start;
 }
 
 #switch-button {
@@ -67,7 +63,7 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  margin-left: 2rem;
+  margin: 0 1rem;
 }
 
 #switch-button .light {
@@ -80,4 +76,101 @@
 
 .lightmode #switch-button .dark {
   display: none;
+}
+
+#toggle-theme {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+
+  display: flex;
+  justify-content: start;
+}
+
+#toggle-theme:hover {
+  background-color: var(--primary-color);
+}
+
+@media (max-width: 800px) {
+  .navbar-item p {
+    display: none;
+  }
+
+  .navbar-item a {
+    justify-content: center;
+  }
+
+  .main-navbar {
+    width: fit-content;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary-color) var(--background);
+    border: none;
+  }
+
+  #switch-button {
+    margin: 0;
+  }
+
+  #toggle-theme {
+    position: unset;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .main-navbar {
+    min-width: 100%;
+    height: 60px;
+    position: fixed;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: space-around;
+    border-right: none;
+    border-top: 3px solid var(--secondary-color);
+    box-shadow: 0 -3px 2px var(--primary-color);
+    overflow: hidden;
+  }
+
+  .navbar-list {
+    position: unset;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #toggle-theme {
+    width: fit-content;
+    position: fixed;
+    transform: translateY(-100%);
+    right: 0;
+    z-index: 999;
+    margin: 0;
+  }
+
+  #toggle-theme:hover {
+    background-color: transparent;
+  }
+
+  #switch-button {
+    margin: 0 1rem;
+  }
+
+  .content {
+    margin-left: 0;
+    padding-bottom: 60px; /* Adjust this value to match the height of the navbar */
+  }
+
+  .navbar-item {
+    flex: 1;
+    text-align: center;
+  }
+
+  .navbar-item a {
+    flex-direction: column;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
