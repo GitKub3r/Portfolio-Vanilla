@@ -1,0 +1,10 @@
+:root {
+  --navbar-size: 200px;
+  --navbar-height: 60px;
+}
+
+@media (max-width: 800px), (max-height: 480px) {
+  :root {
+    --navbar-size: 75px;
+  }
+}

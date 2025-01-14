@@ -3,6 +3,7 @@
 @import "./home.css";
 @import "./about.css";
 @import "./card.css";
+@import "./sizes.css";
 
 * {
   margin: 0;
@@ -35,6 +36,12 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+}
+
+p {
+  color: var(--subtext-color);
+  font-size: 0.85rem;
+  margin: 0.5rem 0;
 }
 
 .content {

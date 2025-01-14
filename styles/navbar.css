@@ -29,19 +29,24 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   gap: 1.5rem;
   text-decoration: none;
   color: inherit;
   width: 100%;
   padding: 1rem;
   text-transform: capitalize;
+}
+
+.navbar-item p {
+  color: var(--text-color);
   font-size: 1.25rem;
 }
 
 .main-navbar {
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: var(--navbar-size);
   height: 100dvh;
   background-color: var(--primary-color);
   box-shadow: 3px 0 2px var(--primary-color);
@@ -50,7 +55,7 @@
 }
 
 .content {
-  margin-left: 200px;
+  margin-left: var(--navbar-size);
   flex-grow: 1;
 }
 
@@ -91,7 +96,7 @@
   background-color: var(--primary-color);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 800px), (max-height: 480px) {
   .navbar-item p {
     display: none;
   }
@@ -101,7 +106,7 @@
   }
 
   .main-navbar {
-    width: fit-content;
+    width: var(--navbar-size);
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: var(--secondary-color) var(--background);
@@ -118,10 +123,10 @@
   }
 }
 
-@media (max-width: 450px) {
+@media (max-width: 450px), (max-height: 420px) {
   .main-navbar {
     min-width: 100%;
-    height: 60px;
+    height: var(--navbar-height);
     position: fixed;
     bottom: 0;
     flex-direction: row;
@@ -154,11 +159,12 @@
 
   #switch-button {
     margin: 0 1rem;
+    background-color: var(--background);
   }
 
   .content {
     margin-left: 0;
-    padding-bottom: 60px; /* Adjust this value to match the height of the navbar */
+    padding-bottom: var(--navbar-height);
   }
 
   .navbar-item {
