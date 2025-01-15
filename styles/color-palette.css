@@ -15,15 +15,15 @@
 
 .lightmode {
   --background: #e0e0e0;
-  --background-hover: #afafaf;
+  --background-hover: #c0c0c0;
   --background-blur: #e0e0e0bb;
-  --primary-color: #d0d0d0;
-  --secondary-color: #c0c0c0;
+  --primary-color: #b0b0b0;
+  --secondary-color: #909090;
   --accent-color: #005bb5;
-  --text-color: #1a1a1a;
-  --subtext-color: #4a4a4a;
-  --button-hover: #003f7a;
-  --button-delete-hover: #e04a4a;
+  --text-color: #2a2a2a;
+  --subtext-color: #5a5a5a;
+  --button-hover: #004080;
+  --button-delete-hover: #d04a4a;
   --error: #cc3333;
 
   svg {

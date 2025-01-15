@@ -12,6 +12,17 @@
   overflow: hidden;
 }
 
+.card-title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title-section svg {
+  fill: var(--text-color);
+  width: 30px;
+}
+
 .card-desc {
   text-align: justify;
 }
